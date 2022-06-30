@@ -1,0 +1,20 @@
+<app-navabar></app-navabar>
+<form #addItem="ngForm" (ngSubmit)="AddData(addItem.value)">
+    <div class="mb-3 col-xs-4">
+      <label for="Item" class="form-label">Item *</label>
+      <input required type="text" class="form-control" name="name"  [(ngModel)]="data.name" >
+    </div>
+    <div class="mb-3">
+      <label for="Item" class="form-label">Quantity *</label>
+      <input required [(ngModel)]="data.quantity" name="quantity" type="number" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label for="Item" class="form-label">Cost Price *</label>
+        <input required type="number" class="form-control" name="CostPrice" [(ngModel)]="data.CostPrice">
+      </div>
+      <div class="mb-3">
+        <label for="Item" class="form-label">Sale Price *</label>
+        <input required type="number" class="form-control" name="SalePrice" [(ngModel)]="data.SalePrice">
+      </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
